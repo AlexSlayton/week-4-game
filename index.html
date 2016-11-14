@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystals Collector</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Crystals Collector!</h1>
+		<div class="instructionBox">
+			<p>You will be given a random number at the start of the game.</p><br>
+			<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p><br>
+			<p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p><br>
+			<p>The value of each crystal is hidden from you until you click on it.</p><br>
+			<p>Each time when the game starts, the game will change the value of each crystal.</p>
+		</div>
+		<div id="randomNumber"></div>
+		<div id="winLoss">Win Loss
+			<div id="Wins">Wins:</div>
+			<div id="Losses">Losses:</div>
+			</div>
+		<div id="crystalImages">
+			<div id="blue">
+				<img src="assets/images/blue.png">
+			</div>
+			<div id="red">
+				<img src="assets/images/red.png">
+			</div>
+			<div id="yellow">
+				<img src="assets/images/yellow.png">
+			</div>
+			<div id="green">
+				<img src="assets/images/green.png">
+			</div>
+		</div>
+		<div id="totalScore">
+			<p>Your total score is:</p>
+		</div>
+		<div id="scoreBox">Score here</div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	//Make the vars that will interact with the game properties
+
+		$(document).ready(function(){
+
+	var randomNumber = Math.floor(Math.random() * (120 - 19)) + 19;
+	console.log(randomNumber);
+
+	var blueCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
+	console.log(blueCrystal);
+
+	var redCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
+	console.log(redCrystal);
+
+	var yellowCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
+	console.log(yellowCrystal);
+
+	var greenCrystal = Math.floor(Math.random() * (12 - 1)) + 1;	
+	console.log(greenCrystal);
+
+	var totalScore = [blueCrystal + redCrystal + yellowCrystal + greenCrystal];
+	console.log(totalScore); 
+
+ 	var CrystalGame = "Crystal Collector";
+	console.log(CrystalGame);
+
+	var scoreCounter = 0;
+	console.log(scoreCounter);
+
+	var wins = 0;
+	var losses = 0;
+	$('#win').text(wins);
+	$('#loss').text(losses);
+
+	
+	
+	
+	
+
+	crystals = ['assets/images/red.png','assets/images/blue.png','assets/images/yellow.png','assets/images/green.png'];
+
+	
+
+	$('#randomNumber').append(randomNumber);
+
+	
+
+	function myFunction(){
+		totalScore = randomNumber;
+	}
+});
+	$("#blue").on("click", function(){
+		scoreCounter++;
+	});
+
+
+
+		//var html = "<p>Wins: " + wins + "</p>";
+
+
+</script>
+
+</body>
+</html>

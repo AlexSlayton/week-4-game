@@ -1,0 +1,28 @@
+body {
+	background-color: aqua;
+}
+	.container {
+		
+		margin: 0px auto;
+	}
+	h1 {
+		font-size: 35px;
+	}
+	.instructionBox{
+		background-color: #ebebeb;
+		font-color: black;
+		font-size: 25px;
+	}
+	#randomNumber {
+		background-color: green;
+		font-size: 30px;
+	}
+	#winLoss {
+		background-color: pink;
+	}
+	#totalScore {
+		background-color: orange;
+	}
+	#scoreBox {
+		background-color: red;
+	}
